@@ -1,0 +1,836 @@
+{
+  "version": 1,
+  "updated": "2026-10-07",
+  "devices": [
+    {
+      "id": "crestron-rmc4",
+      "manufacturer": "Crestron",
+      "model": "RMC4",
+      "category": "Control",
+      "tag": "CP",
+      "description": "4-Series control system, IFE enclosure, PoE powered",
+      "verified": true,
+      "source": "https://docs.crestron.com/en-us/9227/Content/Topics/Specifications/Specifications.htm",
+      "ports": [
+        {
+          "id": "lan",
+          "name": "LAN (PoE)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
+          "id": "net",
+          "name": "NET (Cresnet)",
+          "signal": "control",
+          "dir": "io",
+          "conn": "Euro 4-pin"
+        },
+        {
+          "id": "com",
+          "name": "COM RS-232/422/485",
+          "signal": "control",
+          "dir": "io",
+          "conn": "Euro 5-pin"
+        },
+        {
+          "id": "ir1",
+          "name": "IR 1",
+          "signal": "control",
+          "dir": "out",
+          "conn": "Euro 4-pin"
+        },
+        {
+          "id": "ir2",
+          "name": "IR 2",
+          "signal": "control",
+          "dir": "out",
+          "conn": "Euro 4-pin"
+        },
+        {
+          "id": "relay1",
+          "name": "RELAY 1",
+          "signal": "control",
+          "dir": "out",
+          "conn": "Euro 4-pin"
+        },
+        {
+          "id": "relay2",
+          "name": "RELAY 2",
+          "signal": "control",
+          "dir": "out",
+          "conn": "Euro 4-pin"
+        },
+        {
+          "id": "din1",
+          "name": "DIGITAL IN 1",
+          "signal": "control",
+          "dir": "in",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "din2",
+          "name": "DIGITAL IN 2",
+          "signal": "control",
+          "dir": "in",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "usb",
+          "name": "USB console",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB OTG"
+        }
+      ]
+    },
+    {
+      "id": "qsc-core-8-flex",
+      "manufacturer": "QSC",
+      "model": "Core 8 Flex",
+      "category": "Audio DSP",
+      "tag": "DSP",
+      "description": "Q-SYS processor with 8 flex analog channels (each in or out), GPIO, RS-232",
+      "verified": true,
+      "notes": "Check the number of RS-232 ports against the current spec sheet.",
+      "source": "https://help.qsys.com/q-sys_9.6/Content/Hardware/Processing/Core_8_Flex.htm",
+      "ports": [
+        {
+          "id": "flex1",
+          "name": "FLEX 1",
+          "signal": "audio",
+          "dir": "io",
+          "conn": "Euro 3-pin",
+          "side": "left"
+        },
+        {
+          "id": "flex2",
+          "name": "FLEX 2",
+          "signal": "audio",
+          "dir": "io",
+          "conn": "Euro 3-pin",
+          "side": "left"
+        },
+        {
+          "id": "flex3",
+          "name": "FLEX 3",
+          "signal": "audio",
+          "dir": "io",
+          "conn": "Euro 3-pin",
+          "side": "left"
+        },
+        {
+          "id": "flex4",
+          "name": "FLEX 4",
+          "signal": "audio",
+          "dir": "io",
+          "conn": "Euro 3-pin",
+          "side": "left"
+        },
+        {
+          "id": "flex5",
+          "name": "FLEX 5",
+          "signal": "audio",
+          "dir": "io",
+          "conn": "Euro 3-pin",
+          "side": "right"
+        },
+        {
+          "id": "flex6",
+          "name": "FLEX 6",
+          "signal": "audio",
+          "dir": "io",
+          "conn": "Euro 3-pin",
+          "side": "right"
+        },
+        {
+          "id": "flex7",
+          "name": "FLEX 7",
+          "signal": "audio",
+          "dir": "io",
+          "conn": "Euro 3-pin",
+          "side": "right"
+        },
+        {
+          "id": "flex8",
+          "name": "FLEX 8",
+          "signal": "audio",
+          "dir": "io",
+          "conn": "Euro 3-pin",
+          "side": "right"
+        },
+        {
+          "id": "gpioin",
+          "name": "GPIO IN 1-8",
+          "signal": "control",
+          "dir": "in",
+          "conn": "Euro bank"
+        },
+        {
+          "id": "gpioout",
+          "name": "GPIO OUT 1-8",
+          "signal": "control",
+          "dir": "out",
+          "conn": "Euro bank"
+        },
+        {
+          "id": "rs232_1",
+          "name": "RS-232 1",
+          "signal": "control",
+          "dir": "io",
+          "conn": "Euro"
+        },
+        {
+          "id": "rs232_2",
+          "name": "RS-232 2",
+          "signal": "control",
+          "dir": "io",
+          "conn": "Euro"
+        },
+        {
+          "id": "lana",
+          "name": "LAN A (Q-LAN primary)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
+          "id": "lanb",
+          "name": "LAN B (Q-LAN backup)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
+          "id": "usb1",
+          "name": "USB-A host 1",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-A"
+        },
+        {
+          "id": "usb2",
+          "name": "USB-A host 2",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-A"
+        }
+      ]
+    },
+    {
+      "id": "crestron-tsw-1070",
+      "manufacturer": "Crestron",
+      "model": "TSW-1070",
+      "category": "Control",
+      "tag": "TP",
+      "description": "10.1 in. wall-mount touch screen",
+      "verified": false,
+      "ports": [
+        {
+          "id": "lan",
+          "name": "LAN (PoE)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        }
+      ]
+    },
+    {
+      "id": "shure-mxa920",
+      "manufacturer": "Shure",
+      "model": "MXA920",
+      "category": "Audio",
+      "tag": "MIC",
+      "description": "Ceiling array microphone, Dante, PoE+",
+      "verified": false,
+      "ports": [
+        {
+          "id": "net",
+          "name": "Network (Dante, PoE+)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        }
+      ]
+    },
+    {
+      "id": "generic-wired-mic",
+      "manufacturer": "Generic",
+      "model": "Wired microphone",
+      "category": "Audio",
+      "tag": "MIC",
+      "generic": true,
+      "description": "Gooseneck or handheld mic",
+      "ports": [
+        {
+          "id": "out",
+          "name": "MIC OUT",
+          "signal": "audio",
+          "dir": "out",
+          "conn": "XLR"
+        }
+      ]
+    },
+    {
+      "id": "generic-amp-4ch",
+      "manufacturer": "Generic",
+      "model": "4-channel amplifier",
+      "category": "Audio",
+      "tag": "AMP",
+      "generic": true,
+      "description": "Install power amplifier",
+      "ports": [
+        {
+          "id": "in1",
+          "name": "IN 1",
+          "signal": "audio",
+          "dir": "in",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "in2",
+          "name": "IN 2",
+          "signal": "audio",
+          "dir": "in",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "in3",
+          "name": "IN 3",
+          "signal": "audio",
+          "dir": "in",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "in4",
+          "name": "IN 4",
+          "signal": "audio",
+          "dir": "in",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "spk1",
+          "name": "SPK OUT 1",
+          "signal": "audio",
+          "dir": "out",
+          "conn": "Euro 2-pin"
+        },
+        {
+          "id": "spk2",
+          "name": "SPK OUT 2",
+          "signal": "audio",
+          "dir": "out",
+          "conn": "Euro 2-pin"
+        },
+        {
+          "id": "spk3",
+          "name": "SPK OUT 3",
+          "signal": "audio",
+          "dir": "out",
+          "conn": "Euro 2-pin"
+        },
+        {
+          "id": "spk4",
+          "name": "SPK OUT 4",
+          "signal": "audio",
+          "dir": "out",
+          "conn": "Euro 2-pin"
+        }
+      ]
+    },
+    {
+      "id": "generic-ceiling-speaker",
+      "manufacturer": "Generic",
+      "model": "Ceiling speaker",
+      "category": "Audio",
+      "tag": "SPK",
+      "generic": true,
+      "description": "70/100V or low-Z",
+      "ports": [
+        {
+          "id": "in",
+          "name": "SPK IN",
+          "signal": "audio",
+          "dir": "in",
+          "conn": "Terminals"
+        }
+      ]
+    },
+    {
+      "id": "generic-display",
+      "manufacturer": "Generic",
+      "model": "Display, 3 HDMI",
+      "category": "Displays",
+      "tag": "DSP",
+      "generic": true,
+      "description": "Commercial flat panel",
+      "ports": [
+        {
+          "id": "hdmi1",
+          "name": "HDMI 1",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "hdmi2",
+          "name": "HDMI 2",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "hdmi3",
+          "name": "HDMI 3",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "rs232",
+          "name": "RS-232",
+          "signal": "control",
+          "dir": "io",
+          "conn": "DB9"
+        },
+        {
+          "id": "lan",
+          "name": "LAN",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
+          "id": "aout",
+          "name": "AUDIO OUT",
+          "signal": "audio",
+          "dir": "out",
+          "conn": "3.5 mm"
+        }
+      ]
+    },
+    {
+      "id": "generic-projector",
+      "manufacturer": "Generic",
+      "model": "Projector, HDBaseT",
+      "category": "Displays",
+      "tag": "PJ",
+      "generic": true,
+      "description": "Laser projector with HDBaseT input",
+      "ports": [
+        {
+          "id": "hdmi1",
+          "name": "HDMI 1",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "hdmi2",
+          "name": "HDMI 2",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "hdbt",
+          "name": "HDBaseT IN",
+          "signal": "video",
+          "dir": "in",
+          "conn": "RJ45"
+        },
+        {
+          "id": "rs232",
+          "name": "RS-232",
+          "signal": "control",
+          "dir": "io",
+          "conn": "DB9"
+        },
+        {
+          "id": "lan",
+          "name": "LAN",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        }
+      ]
+    },
+    {
+      "id": "generic-screen-ctrl",
+      "manufacturer": "Generic",
+      "model": "Motorised screen controller",
+      "category": "Displays",
+      "tag": "SCR",
+      "generic": true,
+      "description": "Dry-contact up/down",
+      "ports": [
+        {
+          "id": "up",
+          "name": "UP",
+          "signal": "control",
+          "dir": "in",
+          "conn": "Dry contact"
+        },
+        {
+          "id": "down",
+          "name": "DOWN",
+          "signal": "control",
+          "dir": "in",
+          "conn": "Dry contact"
+        }
+      ]
+    },
+    {
+      "id": "generic-laptop",
+      "manufacturer": "Generic",
+      "model": "Laptop (guest)",
+      "category": "Sources",
+      "tag": "SRC",
+      "generic": true,
+      "description": "Table input source",
+      "ports": [
+        {
+          "id": "hdmi",
+          "name": "HDMI OUT",
+          "signal": "video",
+          "dir": "out",
+          "conn": "HDMI"
+        },
+        {
+          "id": "usb",
+          "name": "USB",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-C"
+        }
+      ]
+    },
+    {
+      "id": "generic-room-pc",
+      "manufacturer": "Generic",
+      "model": "Room PC / codec",
+      "category": "Sources",
+      "tag": "PC",
+      "generic": true,
+      "description": "Teams/Zoom room compute",
+      "ports": [
+        {
+          "id": "hdmiin",
+          "name": "HDMI IN (content)",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "usbcam",
+          "name": "USB (camera)",
+          "signal": "usb",
+          "dir": "in",
+          "conn": "USB-A"
+        },
+        {
+          "id": "hdmiout1",
+          "name": "HDMI OUT 1",
+          "signal": "video",
+          "dir": "out",
+          "conn": "HDMI"
+        },
+        {
+          "id": "hdmiout2",
+          "name": "HDMI OUT 2",
+          "signal": "video",
+          "dir": "out",
+          "conn": "HDMI"
+        },
+        {
+          "id": "lan",
+          "name": "LAN",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        }
+      ]
+    },
+    {
+      "id": "generic-ptz",
+      "manufacturer": "Generic",
+      "model": "PTZ camera",
+      "category": "Video",
+      "tag": "CAM",
+      "generic": true,
+      "description": "HDMI / SDI / USB / IP camera",
+      "ports": [
+        {
+          "id": "rs232",
+          "name": "RS-232 (VISCA)",
+          "signal": "control",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
+          "id": "hdmi",
+          "name": "HDMI OUT",
+          "signal": "video",
+          "dir": "out",
+          "conn": "HDMI"
+        },
+        {
+          "id": "sdi",
+          "name": "SDI OUT",
+          "signal": "video",
+          "dir": "out",
+          "conn": "BNC"
+        },
+        {
+          "id": "usb",
+          "name": "USB OUT (UVC)",
+          "signal": "usb",
+          "dir": "out",
+          "conn": "USB-B"
+        },
+        {
+          "id": "lan",
+          "name": "LAN (PoE)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        }
+      ]
+    },
+    {
+      "id": "generic-hdbt-tx",
+      "manufacturer": "Generic",
+      "model": "HDBaseT transmitter",
+      "category": "Video",
+      "tag": "TX",
+      "generic": true,
+      "description": "HDMI over Cat6 sender",
+      "ports": [
+        {
+          "id": "hdmi",
+          "name": "HDMI IN",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "ir",
+          "name": "IR IN",
+          "signal": "control",
+          "dir": "in",
+          "conn": "3.5 mm"
+        },
+        {
+          "id": "hdbt",
+          "name": "HDBaseT OUT",
+          "signal": "video",
+          "dir": "out",
+          "conn": "RJ45"
+        },
+        {
+          "id": "rs232",
+          "name": "RS-232",
+          "signal": "control",
+          "dir": "io",
+          "conn": "Euro 3-pin"
+        }
+      ]
+    },
+    {
+      "id": "generic-hdbt-rx",
+      "manufacturer": "Generic",
+      "model": "HDBaseT receiver",
+      "category": "Video",
+      "tag": "RX",
+      "generic": true,
+      "description": "HDMI over Cat6 receiver",
+      "ports": [
+        {
+          "id": "hdbt",
+          "name": "HDBaseT IN",
+          "signal": "video",
+          "dir": "in",
+          "conn": "RJ45"
+        },
+        {
+          "id": "hdmi",
+          "name": "HDMI OUT",
+          "signal": "video",
+          "dir": "out",
+          "conn": "HDMI"
+        },
+        {
+          "id": "ir",
+          "name": "IR OUT",
+          "signal": "control",
+          "dir": "out",
+          "conn": "3.5 mm"
+        },
+        {
+          "id": "rs232",
+          "name": "RS-232",
+          "signal": "control",
+          "dir": "io",
+          "conn": "Euro 3-pin"
+        }
+      ]
+    },
+    {
+      "id": "generic-matrix-4x2",
+      "manufacturer": "Generic",
+      "model": "HDMI matrix 4x2",
+      "category": "Video",
+      "tag": "SW",
+      "generic": true,
+      "description": "Presentation matrix switcher",
+      "ports": [
+        {
+          "id": "in1",
+          "name": "HDMI IN 1",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "in2",
+          "name": "HDMI IN 2",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "in3",
+          "name": "HDMI IN 3",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "in4",
+          "name": "HDMI IN 4",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "out1",
+          "name": "HDMI OUT 1",
+          "signal": "video",
+          "dir": "out",
+          "conn": "HDMI"
+        },
+        {
+          "id": "out2",
+          "name": "HDMI OUT 2",
+          "signal": "video",
+          "dir": "out",
+          "conn": "HDMI"
+        },
+        {
+          "id": "aout",
+          "name": "AUDIO OUT (de-embed)",
+          "signal": "audio",
+          "dir": "out",
+          "conn": "Euro 5-pin"
+        },
+        {
+          "id": "rs232",
+          "name": "RS-232",
+          "signal": "control",
+          "dir": "io",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "lan",
+          "name": "LAN",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        }
+      ]
+    },
+    {
+      "id": "generic-poe-switch-8",
+      "manufacturer": "Generic",
+      "model": "PoE switch, 8 port",
+      "category": "Network",
+      "tag": "NSW",
+      "generic": true,
+      "description": "Managed PoE+ switch for AV VLANs",
+      "ports": [
+        {
+          "id": "p1",
+          "name": "PORT 1",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p2",
+          "name": "PORT 2",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p3",
+          "name": "PORT 3",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p4",
+          "name": "PORT 4",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p5",
+          "name": "PORT 5",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p6",
+          "name": "PORT 6",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p7",
+          "name": "PORT 7",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p8",
+          "name": "PORT 8",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "sfp",
+          "name": "UPLINK",
+          "signal": "network",
+          "dir": "io",
+          "conn": "SFP",
+          "side": "right"
+        }
+      ]
+    }
+  ]
+}
