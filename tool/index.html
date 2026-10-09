@@ -302,12 +302,15 @@ function portPos(dev,pid){
 }
 function nextTag(def){
   const pre=def.tag||(def.model||"DEV").replace(/[^A-Za-z]/g,"").slice(0,3).toUpperCase();
-  state.counters["tag:"+pre]=(state.counters["tag:"+pre]||0)+1;
-  return pre+"-"+String(state.counters["tag:"+pre]).padStart(2,"0");
+  const used=new Set(state.devices.filter(d=>d.tag&&d.tag.startsWith(pre+"-")).map(d=>parseInt(d.tag.slice(pre.length+1),10)));
+  let n=1; while(used.has(n)) n++;
+  return pre+"-"+String(n).padStart(2,"0");
 }
 function nextCable(sig){
-  const pre=SIGNALS[sig]?.prefix||"X"; state.counters["cab:"+pre]=(state.counters["cab:"+pre]||0)+1;
-  return pre+"-"+String(state.counters["cab:"+pre]).padStart(3,"0");
+  const pre=SIGNALS[sig]?.prefix||"X";
+  const used=new Set(state.conns.filter(c=>c.cable&&c.cable.startsWith(pre+"-")).map(c=>parseInt(c.cable.slice(pre.length+1),10)));
+  let n=1; while(used.has(n)) n++;
+  return pre+"-"+String(n).padStart(3,"0");
 }
 function addDevice(libId,pt){
   const def=findLib(libId); if(!def) return;
