@@ -328,7 +328,8 @@ function tryConnect(a,b){
   for(const [d,p,dd] of [[a.d,a.p,da],[b.d,b.p,db]]) if(portUsed(d,p)){toast(`${dd.tag} ${portDef(dd,p).name} already has a cable. Delete it first.`);return}
   let from=a,to=b; if(pa.dir==="in"||pb.dir==="out"){from=b;to=a}
   pushUndo();
-  const c={id:uid(),from,to,signal:pa.signal,cable:nextCable(pa.signal),type:"",length:"",note:""};
+  const cableSig=(pa.signal==="video"&&pa.conn==="RJ45"&&pb.conn==="RJ45")?"network":pa.signal;
+  const c={id:uid(),from,to,signal:cableSig,cable:nextCable(cableSig),type:"",length:"",note:""};
   state.conns.push(c); sel={type:"conn",id:c.id}; changed();
 }
 function deleteSel(){
