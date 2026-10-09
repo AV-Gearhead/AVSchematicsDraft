@@ -324,6 +324,7 @@ function tryConnect(a,b){
   if(a.d===b.d){toast("Connect to a port on a different device.");return}
   const da=getDev(a.d),db=getDev(b.d),pa=portDef(da,a.p),pb=portDef(db,b.p);
   if(pa.signal!==pb.signal){toast(`${SIGNALS[pa.signal]?.label||pa.signal} can't connect to ${SIGNALS[pb.signal]?.label||pb.signal}. Use a converter device between them.`);return}
+  if(pa.signal==="video"&&pa.conn!==pb.conn){toast(`${pa.conn} can't plug into ${pb.conn}. Use a transmitter/receiver or converter between them.`);return}
   if(pa.dir===pb.dir&&pa.dir!=="io"){toast(`Both ports are ${pa.dir==="in"?"inputs":"outputs"}.`);return}
   for(const [d,p,dd] of [[a.d,a.p,da],[b.d,b.p,db]]) if(portUsed(d,p)){toast(`${dd.tag} ${portDef(dd,p).name} already has a cable. Delete it first.`);return}
   let from=a,to=b; if(pa.dir==="in"||pb.dir==="out"){from=b;to=a}
