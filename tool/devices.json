@@ -286,9 +286,8 @@
       "model": "Core 8 Flex",
       "category": "Audio DSP",
       "tag": "DSP",
-      "description": "Q-SYS processor with 8 flex analog channels (each in or out), GPIO, RS-232",
+      "description": "Q-SYS processor with 8 flex analog channels (each in or out), GPIO, RS-232, and USB connectivity",
       "verified": true,
-      "notes": "Check the number of RS-232 ports against the current spec sheet.",
       "source": "https://help.qsys.com/q-sys_9.6/Content/Hardware/Processing/Core_8_Flex.htm",
       "ports": [
         {
@@ -374,14 +373,14 @@
           "name": "RS-232 1",
           "signal": "control",
           "dir": "io",
-          "conn": "Euro"
+          "conn": "Euro 3-pin"
         },
         {
           "id": "rs232_2",
           "name": "RS-232 2",
           "signal": "control",
           "dir": "io",
-          "conn": "Euro"
+          "conn": "Euro 3-pin"
         },
         {
           "id": "lana",
@@ -396,6 +395,13 @@
           "signal": "network",
           "dir": "io",
           "conn": "RJ45"
+        },
+        {
+          "id": "usb_b",
+          "name": "USB Device B (Bridging)",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-B"
         },
         {
           "id": "usb1",
@@ -419,9 +425,105 @@
       "model": "Core 110f",
       "category": "Audio DSP",
       "tag": "DSP",
-      "description": "Q-SYS processor, network-only I/O (needs I/O frames or Flex)",
-      "verified": false,
-      "notes": "No onboard analog I/O — pair with an I/O-8 Flex or NV frame for local audio.",
+      "description": "Q-SYS processor with 24 onboard analog I/O channels (8 Mic/Line In, 8 Line Out, 8 Flex I/O), GPIO, RS-232, POTS, and USB",
+      "verified": true,
+      "source": "https://www.qsys.com/products-solutions/q-sys/processing/core-110f/",
+      "ports": [
+        {
+          "id": "mic_in_1_8",
+          "name": "MIC/LINE IN 1-8",
+          "signal": "audio",
+          "dir": "in",
+          "conn": "Euro bank"
+        },
+        {
+          "id": "line_out_1_8",
+          "name": "LINE OUT 1-8",
+          "signal": "audio",
+          "dir": "out",
+          "conn": "Euro bank"
+        },
+        {
+          "id": "flex_1_8",
+          "name": "FLEX I/O 1-8",
+          "signal": "audio",
+          "dir": "io",
+          "conn": "Euro bank"
+        },
+        {
+          "id": "gpioin",
+          "name": "GPIO IN 1-16",
+          "signal": "control",
+          "dir": "in",
+          "conn": "Euro bank"
+        },
+        {
+          "id": "gpioout",
+          "name": "GPIO OUT 1-16",
+          "signal": "control",
+          "dir": "out",
+          "conn": "Euro bank"
+        },
+        {
+          "id": "rs232",
+          "name": "RS-232",
+          "signal": "control",
+          "dir": "io",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "lana",
+          "name": "LAN A (Q-LAN primary)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
+          "id": "lanb",
+          "name": "LAN B (Q-LAN backup)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
+          "id": "usb_b",
+          "name": "USB Device B (Audio Bridging)",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-B"
+        },
+        {
+          "id": "usb_a_1",
+          "name": "USB Host A 1",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-A"
+        },
+        {
+          "id": "usb_a_2",
+          "name": "USB Host A 2",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-A"
+        },
+        {
+          "id": "pots",
+          "name": "POTS / Phone Line",
+          "signal": "control",
+          "dir": "io",
+          "conn": "RJ11"
+        }
+      ]
+    },
+    {
+      "id": "qsc-core-nano",
+      "manufacturer": "QSC",
+      "model": "Core Nano",
+      "category": "Audio DSP",
+      "tag": "DSP",
+      "description": "Network-only Q-SYS processor without analog I/O, ideal for network audio endpoints and software-based processing",
+      "verified": true,
+      "source": "https://help.qsys.com/q-sys_9.0/Content/Hardware/Cores/Core_Nano.htm",
       "ports": [
         {
           "id": "lana",
@@ -438,32 +540,189 @@
           "conn": "RJ45"
         },
         {
+          "id": "rs232_1",
+          "name": "RS-232 1",
+          "signal": "control",
+          "dir": "io",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "rs232_2",
+          "name": "RS-232 2",
+          "signal": "control",
+          "dir": "io",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "usb_c",
+          "name": "USB-C (Device/DisplayPort)",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-C"
+        },
+        {
+          "id": "usb_b",
+          "name": "USB Device B (Audio/Video Bridging)",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-B"
+        },
+        {
+          "id": "usb_a_1",
+          "name": "USB Host A 1",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-A"
+        },
+        {
+          "id": "usb_a_2",
+          "name": "USB Host A 2",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-A"
+        }
+      ]
+    },
+    {
+      "id": "qsc-core-610",
+      "manufacturer": "QSC",
+      "model": "Core 610",
+      "category": "Audio DSP",
+      "tag": "DSP",
+      "description": "Enterprise-grade high-capacity Q-SYS processor with redundant dual power supplies and quad Q-LAN ports",
+      "verified": true,
+      "source": "https://support.qsys.com/en_US/awareness/awareness-%7Ccore-610-q-sys-supported-lan-ports",
+      "ports": [
+        {
+          "id": "lana",
+          "name": "LAN A (Q-LAN primary)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
+          "id": "lanb",
+          "name": "LAN B (Q-LAN backup)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
+          "id": "auxa",
+          "name": "AUX A (Network)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
+          "id": "auxb",
+          "name": "AUX B (Network)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
           "id": "rs232",
           "name": "RS-232",
           "signal": "control",
           "dir": "io",
-          "conn": "Euro"
+          "conn": "DB9"
         },
         {
-          "id": "gpioin",
-          "name": "GPIO IN 1-4",
-          "signal": "control",
-          "dir": "in",
-          "conn": "Euro bank"
-        },
-        {
-          "id": "gpioout",
-          "name": "GPIO OUT 1-4",
-          "signal": "control",
-          "dir": "out",
-          "conn": "Euro bank"
-        },
-        {
-          "id": "usb",
-          "name": "USB-A host",
+          "id": "usb_a_1",
+          "name": "USB Host A 1",
           "signal": "usb",
           "dir": "io",
           "conn": "USB-A"
+        },
+        {
+          "id": "usb_a_2",
+          "name": "USB Host A 2",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-A"
+        }
+      ]
+    },
+    {
+      "id": "qsc-nv-32-h-core",
+      "manufacturer": "QSC",
+      "model": "NV-32-H (Core Mode)",
+      "category": "Audio DSP",
+      "tag": "DSP",
+      "description": "Multi-stream HDMI AV-over-IP bridge configured in Q-SYS Core Mode",
+      "verified": true,
+      "source": "https://help.qsys.com/q-sys_9.6/Content/Hardware/NV-32-H.htm",
+      "ports": [
+        {
+          "id": "hdmi_in_1",
+          "name": "HDMI IN 1",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "hdmi_in_2",
+          "name": "HDMI IN 2",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "hdmi_in_3",
+          "name": "HDMI IN 3",
+          "signal": "video",
+          "dir": "in",
+          "conn": "HDMI"
+        },
+        {
+          "id": "hdmi_out_1",
+          "name": "HDMI OUT 1",
+          "signal": "video",
+          "dir": "out",
+          "conn": "HDMI"
+        },
+        {
+          "id": "hdmi_out_2",
+          "name": "HDMI OUT 2",
+          "signal": "video",
+          "dir": "out",
+          "conn": "HDMI"
+        },
+        {
+          "id": "audio_in",
+          "name": "AUDIO IN 1-2 (Mic/Line)",
+          "signal": "audio",
+          "dir": "in",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "audio_out",
+          "name": "AUDIO OUT 1-2 (Line Out)",
+          "signal": "audio",
+          "dir": "out",
+          "conn": "Euro 3-pin"
+        },
+        {
+          "id": "lan",
+          "name": "LAN (PoE+, Q-LAN)",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45"
+        },
+        {
+          "id": "usb_c",
+          "name": "USB-C (AV Bridging)",
+          "signal": "usb",
+          "dir": "io",
+          "conn": "USB-C"
+        },
+        {
+          "id": "rs232",
+          "name": "RS-232",
+          "signal": "control",
+          "dir": "io",
+          "conn": "Euro 3-pin"
         }
       ]
     },
@@ -1435,6 +1694,434 @@
           "signal": "network",
           "dir": "io",
           "conn": "RJ45"
+        }
+      ]
+    },
+    {
+      "id": "netgear-avline-48",
+      "manufacturer": "Netgear",
+      "model": "AV Line 48-Port Switch",
+      "category": "Network",
+      "tag": "NSW",
+      "description": "48-port AV-over-IP managed switch with 48x 1G RJ45 PoE+ ports and 4x 10G SFP+ uplinks",
+      "verified": true,
+      "source": "https://www.netgear.com/business/wired/switches/fully-managed/m4250/",
+      "ports": [
+        {
+          "id": "p1",
+          "name": "PORT 1",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p2",
+          "name": "PORT 2",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p3",
+          "name": "PORT 3",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p4",
+          "name": "PORT 4",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p5",
+          "name": "PORT 5",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p6",
+          "name": "PORT 6",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p7",
+          "name": "PORT 7",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p8",
+          "name": "PORT 8",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p9",
+          "name": "PORT 9",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p10",
+          "name": "PORT 10",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p11",
+          "name": "PORT 11",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p12",
+          "name": "PORT 12",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p13",
+          "name": "PORT 13",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p14",
+          "name": "PORT 14",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p15",
+          "name": "PORT 15",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p16",
+          "name": "PORT 16",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p17",
+          "name": "PORT 17",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p18",
+          "name": "PORT 18",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p19",
+          "name": "PORT 19",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p20",
+          "name": "PORT 20",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p21",
+          "name": "PORT 21",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p22",
+          "name": "PORT 22",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p23",
+          "name": "PORT 23",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p24",
+          "name": "PORT 24",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "left"
+        },
+        {
+          "id": "p25",
+          "name": "PORT 25",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p26",
+          "name": "PORT 26",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p27",
+          "name": "PORT 27",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p28",
+          "name": "PORT 28",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p29",
+          "name": "PORT 29",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p30",
+          "name": "PORT 30",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p31",
+          "name": "PORT 31",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p32",
+          "name": "PORT 32",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p33",
+          "name": "PORT 33",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p34",
+          "name": "PORT 34",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p35",
+          "name": "PORT 35",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p36",
+          "name": "PORT 36",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p37",
+          "name": "PORT 37",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p38",
+          "name": "PORT 38",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p39",
+          "name": "PORT 39",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p40",
+          "name": "PORT 40",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p41",
+          "name": "PORT 41",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p42",
+          "name": "PORT 42",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p43",
+          "name": "PORT 43",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p44",
+          "name": "PORT 44",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p45",
+          "name": "PORT 45",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p46",
+          "name": "PORT 46",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p47",
+          "name": "PORT 47",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "p48",
+          "name": "PORT 48",
+          "signal": "network",
+          "dir": "io",
+          "conn": "RJ45",
+          "side": "right"
+        },
+        {
+          "id": "sfp1",
+          "name": "UPLINK 1",
+          "signal": "network",
+          "dir": "io",
+          "conn": "SFP+",
+          "side": "right"
+        },
+        {
+          "id": "sfp2",
+          "name": "UPLINK 2",
+          "signal": "network",
+          "dir": "io",
+          "conn": "SFP+",
+          "side": "right"
+        },
+        {
+          "id": "sfp3",
+          "name": "UPLINK 3",
+          "signal": "network",
+          "dir": "io",
+          "conn": "SFP+",
+          "side": "right"
+        },
+        {
+          "id": "sfp4",
+          "name": "UPLINK 4",
+          "signal": "network",
+          "dir": "io",
+          "conn": "SFP+",
+          "side": "right"
         }
       ]
     },
